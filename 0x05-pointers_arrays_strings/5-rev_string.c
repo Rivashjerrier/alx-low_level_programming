@@ -17,3 +17,17 @@ void rev_string(char *str)
 		str[len - 1 - i] = temp;
 	}
 }
+
+/**
+ * _strlen - determine the length of the string
+ * @str: string to be processed
+ * Return: length of string
+ */
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
+}
