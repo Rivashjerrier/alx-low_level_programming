@@ -12,20 +12,20 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int x, y;
+	int x, y;
 	char *s;
 
 	if (str == NULL)
 		return (NULL);
 	for (x = 0; str[x]; ++x)
 		;
-	++y;
-	s = malloc((y + 1) * sizeof(char));
+	y++;
+	s = malloc(x * sizeof(char));
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	for (y = 0; y < 1; ++y)
+	for (y = 0; y < x; ++y)
 	{
 		s[y] = str[y];
 	}
