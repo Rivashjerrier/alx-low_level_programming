@@ -21,6 +21,6 @@ int *array_range(int min, int max)
 	if (!ptr)
 		return (NULL);
 	for (x = 0; x <= (max - min); x++)
-		ptr[x] = min + 1;
+		ptr[x] = min + x;
 	return (ptr);
 }
