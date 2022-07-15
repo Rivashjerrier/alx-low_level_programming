@@ -4,7 +4,7 @@
  * add_node - adds a new node at the beginnning of a list
  *
  * @head: head
- * str: string
+ * @str: string
  *
  * Return: the address of the new element, else
  * NULL if it failed
@@ -25,7 +25,7 @@ list_t *add_node(list_t **head, const char *str)
 		free(node);
 		return (NULL);
 	}
-	node->len = strlen(node-str);
+	node->len = strlen(node->str);
 	node->next = *head;
 	*head = node;
 
