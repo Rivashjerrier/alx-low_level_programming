@@ -42,9 +42,10 @@ int create_file(const char *filename, char *text_content)
  */
 int _string_len(char *s)
 {
-	size_t len;
+	int len;
 
-	for (len = 0; s[len]; ++s)
-		;
+	len = 0;
+	while (*(s + len))
+		++len;
 	return (len);
 }
